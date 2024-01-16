@@ -11,8 +11,18 @@ public class CompletableFutureApplication {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		// SpringApplication.run(CompletableFutureApplication.class, args);
+
+		// understading completable Future runAsync
+		workingWithRunAsync();
+		
+	}
+
+	private static void workingWithRunAsync() throws InterruptedException, ExecutionException  {
 		RunAsyncDemo runAsyncDemo = new RunAsyncDemo();
 		runAsyncDemo.saveEmployees(new File("Completable-Future\\employees.json"));
+		runAsyncDemo.saveEmployeesWithExecutor(new File("Completable-Future\\employees.json"));
 	}
+
+
 
 }
